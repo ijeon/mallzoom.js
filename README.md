@@ -130,5 +130,9 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 ### 라이센스
 해당 플러그인은 GPL 3.0 라이센스로 작성되었습니다. (참고: [라이센스 전문](https://opensource.org/licenses/gpl-3.0.html))
 
+### 알려진 버그
+- 창 크기 변환 또는 레이아웃의 변화가 생기면 e.page 계산 오류가 발생할 수 있습니다.
+- 줌 아웃 시 소수점 계산이 발생하면 확대 이미지 모서리에 배경이 일부 보일 수 있습니다.
+
 ### 문의 및 제안
 전인표 (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
