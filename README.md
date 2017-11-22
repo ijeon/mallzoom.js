@@ -131,4 +131,4 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 해당 플러그인은 GPL 3.0 라이센스로 작성되었습니다. (참고: [라이센스 전문](https://opensource.org/licenses/gpl-3.0.html))
 
 ### 문의 및 제안
-전인표 (inpyodev@gmail.com)
+전인표 (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
