@@ -14,9 +14,9 @@
 ._frm_thumbnail._left { padding-right:10px; }
 ._frm_thumbnail._right { padding-left:10px; }
 ._frm_thumbnail._top ._frm_in_thumbnail, ._frm_thumbnail._bottom ._frm_in_thumbnail { white-space:nowrap; }
-._frm_thumbnail._top ._wrap_thumbnail, ._frm_thumbnail._bottom ._wrap_thumbnail { display:inline-block; margin-right:10px; cursor:pointer; }
+._frm_thumbnail._top ._wrap_thumbnail, ._frm_thumbnail._bottom ._wrap_thumbnail { display:inline-block; margin-right:10px; }
 ._frm_thumbnail._left ._wrap_thumbnail, ._frm_thumbnail._right ._wrap_thumbnail { display:block; margin-bottom:10px; }
-._wrap_thumbnail { border-width:2px; border-color:#aaa; border-style:solid; }
+._wrap_thumbnail { border-width:2px; border-color:#aaa; border-style:solid; cursor:pointer; }
 ._wrap_thumbnail._active { border-color:red; }
 ._frm_output { z-index:30; }
 ._frm_output._top { margin-bottom:40px; }
