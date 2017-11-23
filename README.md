@@ -1,26 +1,26 @@
 # mallzoom.js
 
-mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 jQuery 기반 이미지 확대, 슬라이더 플러그인입니다.<br>커스텀 옵션과 스타일 설정을 통해 다양한 스타일의 슬라이더 컴포넌트를 제작하여 웹 페이지에 삽입할 수 있습니다.
+mallzoom.js is a lightweight jQuery image zoom slider plugin for e-commerce websites.<br>Various customization options are available to create unique slider components for web pages.
 
-### 동작 환경
+### Requirements
 
-- Internet Explorer 8 이상 또는 Chrome, Firefox 등의 PC 웹 브라우저
-- 1.7 버전 이상의 jQuery가 포함된 웹 페이지
+- Modern web browsers include Internet Explorer 8+, Chrome, Firefox
+- Web page includes jQuery 1.7+
 
-### 주요 기능 (v20171120)
+### Features (v20171120)
 
-- 이미지 썸네일 슬라이더
-- 프레임 기준 이미지 크기 맞춤 설정
-- 이미지 부분 확대 출력
-- 마우스 휠 스크롤 배율 단위 변경
-- 슬라이드 썸네일 출력 갯수 설정
-- 확대 이미지, 썸네일 위치 설정
-- 썸네일 갯수에 따른 레이아웃 조정
-- 알림말 내용, 출력시간 설정
+- Image slider with a thumbnail navigation
+- Image fitting over the parent element
+- Partial zoomming on the input image
+- Changing the zoom scale with mousewheel events
+- Number of thumbnail navigations per page setting
+- Position of the zoomed image and thumbnails setting
+- Auto layout adjustment
+- Notification message settings
 
-### 사용방법 및 코드 예시
+### Usage
 
-1 )  jQuery와 mallzoom.js, mallzoom.css 등 플러그인 구동에 필요한 리소스를 로드 순서에 맞게 불러옵니다.
+1 ) Load jQuery, mallzoom.js and mallzoom.css on the web page.
 
 <pre>
 <code>...
@@ -30,7 +30,7 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 ...</code>
 </pre>
 
-2 ) 랩핑 태그 내부에 슬라이드 이미지를 넣고, 썸네일 이미지가 있다면 해당 url을 data-thumbsrc에 담습니다.
+2 ) Wrap the input images with a wrapper element and add thumbnail URLs into each "data-thumbsrc" attribute(option).
 
 <pre>
 <code>&lt;div id="image-zoom"&gt;
@@ -42,7 +42,7 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 &lt;/div&gt;</code>
 </pre>
 
-3 ) 플러그인을 적용할 오브젝트의 높이, 너비, 배경, 보더 등 기본 속성을 지정합니다.
+3 ) Set the basic properties(width, height, background, border...) of the root element.
 
 <pre>
 <code>...
@@ -50,7 +50,7 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 ...</code>
 </pre>
 
-4 ) 문서 로드 시점 이후 플러그인을 호출합니다. 인자 전달부에 수정할 옵션과 값을 입력합니다. (참고: [옵션 일람](#options))
+4 ) Call the plugin and set the option values after document ready. (Ref: [Options](#options))
 
 <pre>
 <code>&lt;script&gt;
@@ -62,7 +62,7 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 &lt;/script&gt;</code>
 </pre>
 
-5 ) 플러그인 호출 후 재생성된 오브젝트의 구조를 확인하여 세부 속성을 수정합니다. (참고: [오브젝트 구조 목업](#structure))
+5 ) Review the object structure and customize style properties. (Ref: [Object Structure](#structure))
 
 <pre>
 <code>...
@@ -75,64 +75,64 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 </pre>
 
 <a name="structure"></a>
-### 오브젝트 구조 목업
+### Object Structure
 
 <pre>
 <code>&lt;div class="mallzoom_object"&gt;
-    &lt;div class="_frm_input"&gt; (삽입 이미지 프레임)
-        &lt;img class="_img_input"&gt; (삽입 이미지)
+    &lt;div class="_frm_input"&gt; (Input Images Frame)
+        &lt;img class="_img_input"&gt; (Input Image)
     &lt;/div&gt;
-    &lt;div class="_frm_overlay"&gt; (오버레이 프레임)
-        &lt;img class="_img_overlay"&gt; (오버레이 이미지)
+    &lt;div class="_frm_overlay"&gt; (Overlay Images Frame)
+        &lt;img class="_img_overlay"&gt; (Overlay Image)
     &lt;/div&gt;
-    &lt;div class="_frm_magnifier"&gt; (돋보기 프레임)
-        &lt;div class="_frm_in_magnifier"&gt; (돋보기 내부 프레임)
-            &lt;img class="_img_magnifier"&gt; (돋보기 오버레이 이미지)
+    &lt;div class="_frm_magnifier"&gt; (Magnifier Frame)
+        &lt;div class="_frm_in_magnifier"&gt; (Magnifier Inner Frame)
+            &lt;img class="_img_magnifier"&gt; (Magnifier Overlay Image)
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="_frm_thumbnail"&gt; (썸네일 프레임)
-        &lt;a class="_nav_thumbnail_prev"&gt;&lt;/a&gt; (이동: 이전으로)
-        &lt;a class="_nav_thumbnail_next"&gt;&lt;/a&gt; (이동: 다음으로)
-        &lt;div class="_frm_in_thumbnail"&gt; (썸네일 내부 프레임)
+    &lt;div class="_frm_thumbnail"&gt; (Thumbnail Navigation Frame)
+        &lt;a class="_nav_thumbnail_prev"&gt;&lt;/a&gt; (Thumbnail Paging Navigation: Previous)
+        &lt;a class="_nav_thumbnail_next"&gt;&lt;/a&gt; (Thumbnail Paging Navigation: Next)
+        &lt;div class="_frm_in_thumbnail"&gt; (Thumbnail Navigation Inner Frame)
             &lt;ul&gt;
-                &lt;li class="_wrap_thumbnail"&gt; (썸네일 이미지 랩)
-                    &lt;img class="_img_thumbnail"&gt; (썸네일 이미지)
+                &lt;li class="_wrap_thumbnail"&gt; (Thumbnail Image Wrap)
+                    &lt;img class="_img_thumbnail"&gt; (Thumbnail Image)
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="_frm_output"&gt; (확대된 이미지 프레임)
-        &lt;p class="_txt_notice"&gt;&lt;/p&gt; (알림말)
-        &lt;div class="_frm_in_output"&gt; (확대된 이미지 내부 프레임)
-            &lt;img class="_img_output"&gt; (확대된 이미지)
+    &lt;div class="_frm_output"&gt; (Output Image Frame)
+        &lt;p class="_txt_notice"&gt;&lt;/p&gt; (Notification Message)
+        &lt;div class="_frm_in_output"&gt; (Output Image Inner Frame)
+            &lt;img class="_img_output"&gt; (Output Image)
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>
 
 <a name="options"></a>
-### 옵션 일람
+### Options
 
-옵션명|값 (기본값)|설명
+Option|Value (Default)|Description
 --|--|---
-**imageFitType**|'fit', 'cover'<br>(기본값: 'fit')|부모 엘리먼트에 대한 이미지의 크기 조정 방식을 지정합니다.<br>fit 방식은 이미지가 잘리지 않도록 너비와 높이 중 긴 값에 맞추며,<br>cover 방식은 배경이 보이지 않도록 짧은 값에 맞추어 크롭합니다.
-**thumbPosition**|'top', 'bottom', 'left', 'right'<br>(기본값: 'bottom')|이미지 썸네일 네비게이션 프레임의 출력 위치를 설정합니다.<br>썸네일 네비게이션의 크기와 간격은 스타일에서 지정된 패딩, 보더<br>값에 따라 자동으로 설정됩니다.
-**thumbCount**|자연수<br>(기본값: 5)| 화면에 표시될 썸네일 갯수를 지정합니다. 썸네일 갯수에 따라<br>썸네일 네비게이션의 크기가 자동으로 조정됩니다.
-**outputPosition**|'top', 'bottom', 'left', 'right'<br>(기본값: 'right')|확대 이미지 프레임의 출력 위치를 지정합니다. 스타일에 지정된<br>마진 값에 따라 간격이 설정됩니다.
-**imageOverlay**|URL 스트링 1차원 배열<br>(기본값 없음)|오버레이 이미지의 URL을 배열 형식으로 입력합니다. 각 인덱스에<br>따라 _ioid_[인덱스]라는 클래스가 이미지에 추가됩니다.
-**zoomScale**|0 이상, 1 이하 소수<br>(기본값: 0.05)|마우스 휠 스크롤에 따른 확대/축소 배율 단위를 조정합니다.<br>1에 가까울수록 배율 변경 속도가 빠르고 단위 간격이 넓습니다.
-**zoomMaximum**|자연수<br>(기본값: 5)|최대 확대 배율을 설정합니다. 숫자가 높을수록 더 높은 배율까지<br>확대할 수 있으며, 배율 변경 속도는 변하지 않습니다.
-**noticeText**|스트링<br>(기본값 없음)|알림말 문구를 삽입합니다. 입력하지 않을 경우 마크업이 생성되지<br>않습니다.
-**noticePosition**|'top', 'bottom'<br>(기본값: 'bottom')|알림말 문구가 출력될 위치를 설정합니다. 알림말은 확대 이미지<br>프레임 내부에 출력됩니다.
-**noticeShowTime**|초 단위 자연수<br>(기본값: 2)|알림말이 표시될 시간을 설정합니다. 해당 초가 지나면 알림말이<br>사라집니다.
-**autoHideNav**|true, false<br>(기본값: false)|썸네일 페이징 네비게이션 버튼 자동 숨김 기능의 활성화 여부를<br>설정합니다. 활성화 시, 이미지 수가 적어 페이징이 불필요한 경우<br>네비게이션 버튼이 출력되지 않고 레이아웃이 조정됩니다.
+**imageFitType**|'fit', 'cover'<br>(Default: 'fit')|Sets the type of image size adjustment according to the parent element.<br>"fit" avoids cropping image by fitting the image to the frame.<br>"cover" works just like "background-size:cover"
+**thumbPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'bottom')|Sets the position of thumbnail navigation frame.<br>Size and the gap between the frames set automatically according to the padding and border-width.
+**thumbCount**|Natural number<br>(Default: 5)| Sets the quantity of thumbnails shown in a page.<br>Thumbnail images' size sets automatically according to this value.
+**outputPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'right')|Sets the position of the output image frame.<br>The gap between the frames sets automatically according to its margin.
+**imageOverlay**|URL Array<br>(No default value)|Adds overlay images. "__ioid__[index]" class will be added to each image.
+**zoomScale**|Float 0-1<br>(Default: 0.05)|Sets basic zoomming scale. Bigger value will make zoomming faster and skip more frames.
+**zoomMaximum**|Natural number<br>(Default: 5)|Sets the maximum zoom scale. Zoomming speed doesn't change.
+**noticeText**|String<br>(No default value)|Sets the notification text. Leave it blank will prevent the plugin from adding markups for notification element.
+**noticePosition**|'top', 'bottom'<br>(Default: 'bottom')|Sets the position of notification message inside the output image frame.
+**noticeShowTime**|Seconds<br>(Default: 2)|Sets the timeout value of notification message.
+**autoHideNav**|true, false<br>(Default: false)|Turn on/off the auto-hiding of thumbnail navigation paging buttons.
 
-### 라이센스
-해당 플러그인은 GPL 3.0 라이센스로 작성되었습니다. (참고: [라이센스 전문](https://opensource.org/licenses/gpl-3.0.html))
+### License
+GPL v3.0 (Ref: [GPL v3.0 Definition](https://opensource.org/licenses/gpl-3.0.html))
 
-### 알려진 버그
-- 창 크기 변환 또는 레이아웃의 변화가 생기면 e.page 계산 오류가 발생할 수 있습니다.
-- 줌 아웃 시 소수점 계산이 발생하면 확대 이미지 모서리에 배경이 일부 보일 수 있습니다.
+### Known Issues
+- Resizing window or changing layouts may cause an "e.page" calculation error.
+- Background color may seen on the trims of output image when user zooms out.
 
-### 문의 및 제안
-전인표 (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
+### Contact
+Inpyo Jeon (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
