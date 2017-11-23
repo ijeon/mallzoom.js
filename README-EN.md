@@ -117,17 +117,17 @@ mallzoom.js is a lightweight jQuery image zoom slider plugin for e-commerce webs
 
 Option|Value (Default)|Description
 --|--|---
-**imageFitType**|'fit', 'cover'<br>(Default: 'fit')|Sets the type of image size adjustment according to the parent element.<br>"fit" avoids cropping image by fitting the image to the frame and "cover"<br>works just like "background-size:cover".
-**thumbPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'bottom')|Sets the position of thumbnail navigation frame.<br>The size of thumbnail navigation frame and the gap between the frames<br>will set automatically according to its padding and border-width.
+**imageFitType**|'fit', 'cover'<br>(Default: 'fit')|Adjust image size according to the parent element.<br>"fit" avoids cropping image by fitting the image to the frame.<br>"cover" works just like "background-size:cover".
+**thumbPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'bottom')|Sets the position of thumbnail navigation frame.<br>Size of thumbnail navigation frame and gap between the frames<br>will set automatically according to its padding and border-width.
 **thumbCount**|Natural number<br>(Default: 5)| Sets the quantity of thumbnails shown in a page.<br>Thumbnail images' size sets automatically according to this value.
-**outputPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'right')|Sets the position of the output image frame.<br>The gap between the frames sets automatically according to its margin.
-**imageOverlay**|URL Array<br>(No default value)|Adds overlay images. "\_ioid\_[index]" class will be added to each image.
+**outputPosition**|'top', 'bottom', 'left', 'right'<br>(Default: 'right')|Sets the position of the output image frame.<br>Gap between the frames sets automatically according to its margin.
+**imageOverlay**|URL Array<br>(No default value)|Adds overlay images and set "src" attribute of each.<br>"\_ioid\_[index]" class will be added to each image.
 **zoomScale**|Float 0-1<br>(Default: 0.05)|Sets basic zoomming scale.<br>Bigger value will make zoomming faster and skip more frames.
 **zoomMaximum**|Natural number<br>(Default: 5)|Sets the maximum zoom scale. Zoomming speed won't change.
-**noticeText**|String<br>(No default value)|Sets the notification text. Leaving it blank will prevent the plugin from<br>adding markups for notification element.
-**noticePosition**|'top', 'bottom'<br>(Default: 'bottom')|Sets the position of notification message inside the output image frame.
-**noticeShowTime**|Seconds<br>(Default: 2)|Sets the timeout value of notification message.
-**autoHideNav**|true, false<br>(Default: false)|Turn on/off the auto-hiding of thumbnail navigation paging buttons.
+**noticeText**|String<br>(No default value)|Sets the notification text. Leaving it blank will prevent the plugin<br>from adding markups for notification element.
+**noticePosition**|'top', 'bottom'<br>(Default: 'bottom')|Sets the position of notification message.
+**noticeShowTime**|Seconds<br>(Default: 2)|Sets the hide timeout value of notification message.
+**autoHideNav**|true, false<br>(Default: false)|Toggle auto-hiding of thumbnail navigation paging buttons.
 
 ### License
 GPL v3.0 (Ref: [GPL v3.0 Definition](https://opensource.org/licenses/gpl-3.0.html))
