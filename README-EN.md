@@ -133,7 +133,7 @@ Option|Value (Default)|Description
 GPL v3.0 (Ref: [GPL v3.0 Definition](https://opensource.org/licenses/gpl-3.0.html))
 
 ### Known Issues
-- Resizing window / changing layouts may cause "e.page" calculation error.
+- Resizing the window or changing the layouts may cause an "e.page" calculation error.
 - Background color may seen sometimes on the trims of output image when user zooms out.
 
 ### Contact
