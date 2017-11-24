@@ -11,12 +11,12 @@ mallzoom.js is a lightweight jQuery image zoom slider plugin for e-commerce webs
 
 ### Updates
 
-Version 20171124 (Bug Fix)
+[Version 20171124](https://github.com/inpyodev/mallzoom.js/blob/master/release/mallzoom_js_v20171124.zip)
 - Added "reverseZoom" option
 - Fixed magnifier offset bug
 - Fixed imageFit loading bug
  
-Version 20171120 (Release Build)
+[Version 20171120](https://github.com/inpyodev/mallzoom.js/blob/master/release/mallzoom_js_v20171120.zip)
 - The first release
 
 ### Features
