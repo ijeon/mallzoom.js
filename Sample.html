@@ -4,8 +4,9 @@
 	<title>Mallzoom Sample</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/mallzoom.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/mallzoom.min.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+	<script src="js/mallzoom.js"></script>
 	
 	<style>
 		* { margin:0; padding:0; }
@@ -32,13 +33,14 @@
 		<img src="http://placehold.it/1400x400/bbb/000">
 		<img src="http://placehold.it/2800x1200/eee/000">
 	</div>
-		
+	
 	<script>
 		$('#test1').mallzoom({
 			thumbPosition: 'top',
 			thumbCount: 4,
 			imageOverlay: ['http://placehold.it/100x100/fff/000', 'http://placehold.it/50x50/666/fff'],
-			autoHideNav: true
+			autoHideNav: true,
+			reverseZoom: true
 		});
 		
 		$('#test2').mallzoom({
@@ -46,6 +48,6 @@
 			thumbPosition: 'right',
 			outputPosition: 'left'
 		});
-	</script>
+	</script>	
 </body>
 </html>

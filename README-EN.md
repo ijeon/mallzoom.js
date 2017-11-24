@@ -1,4 +1,4 @@
-[Open Korean Version](README.md)
+[한글 문서 보기](README.md)
 
 # mallzoom.js
 
@@ -9,7 +9,17 @@ mallzoom.js is a lightweight jQuery image zoom slider plugin for e-commerce webs
 - Modern web browsers (Internet Explorer 8+, Chrome, Firefox...)
 - Web page includes jQuery 1.7+
 
-### Features (v20171120)
+### Updates
+
+Version 20171124 (Bug Fix)
+- Added "reverseZoom" option
+- Fixed magnifier offset bug
+- Fixed imageFit loading bug
+ 
+Version 20171120 (Release Build)
+- The first release
+
+### Features
 
 - Image slider with a thumbnail navigation
 - Image fitting over the parent element
@@ -130,11 +140,14 @@ Option|Value (Default)|Description
 **autoHideNav**|true, false<br>(Default: false)|Toggle auto-hiding of thumbnail navigation paging buttons.
 
 ### License
+
 GPL v3.0 (Ref: [GPL v3.0 Definition](https://opensource.org/licenses/gpl-3.0.html))
 
 ### Known Issues
-- Resizing the window or changing the layouts may cause an "e.page" calculation error.
+
+- Using jQuery 3+ over Internet Explorer 8 may cause an addEventListener error.
 - Background color may seen sometimes on the trims of output image when user zooms out.
 
 ### Contact
+
 Inpyo Jeon (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
