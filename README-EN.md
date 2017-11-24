@@ -138,6 +138,7 @@ Option|Value (Default)|Description
 **noticePosition**|'top', 'bottom'<br>(Default: 'bottom')|Sets the position of notification message.
 **noticeShowTime**|Seconds<br>(Default: 2)|Sets the hide timeout value of notification message.
 **autoHideNav**|true, false<br>(Default: false)|Toggle auto-hiding of thumbnail navigation paging buttons.
+**reverseZoom**|true, false<br>(Default: false)|Sets mouse scroll direction for zoom-in/zoom-out.
 
 ### License
 
@@ -145,7 +146,7 @@ GPL v3.0 (Ref: [GPL v3.0 Definition](https://opensource.org/licenses/gpl-3.0.htm
 
 ### Known Issues
 
-- Using jQuery 3+ over Internet Explorer 8 may cause an addEventListener error.
+- Including jQuery 3+ over Internet Explorer 8 may cause an addEventListener error.
 - Background color may seen sometimes on the trims of output image when user zooms out.
 
 ### Contact
