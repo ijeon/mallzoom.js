@@ -222,7 +222,10 @@
 			var _frmThumbnailPadding = (!_autoHideNav && $imgInput.length > _thumbCount) ? _frmThumbnailPadding * 2 : 0;
 			
 			if (_jwplayVidFlag && _jwplayVidThumb.length == 0){
-				$obj.find('._img_vidthumbnail').attr('src', $imgInput.eq(0).attr('src'));
+				$(window).on('load', function(){
+					var _thisThumbSrc = $wrapThumbnail.eq(0).find('._img_thumbnail').attr('src');
+					$obj.find('._img_vidthumbnail').attr('src', _thisThumbSrc);
+				});
 			}
 			
 			if (_noticeText.length > 0) {
