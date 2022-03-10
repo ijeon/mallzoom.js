@@ -11,7 +11,7 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 
 ### 업데이트
 
-+ [버전 20171124](https://github.com/inpyodev/mallzoom.js/blob/master/release/v20171124)
++ [버전 20171124](https://github.com/ijeon/mallzoom.js/blob/master/release/v20171124)
   - 마우스 휠 방향 변경 옵션 reverseZoom 추가
   - 창 크기 변경시 돋보기 위치가 고정되는 문제 수정
   - 로딩 지연 환경에서 이미지 피팅 불가 문제 수정
@@ -148,4 +148,4 @@ mallzoom.js는 온라인 쇼핑몰 상품 상세 페이지를 위해 개발된 j
 - 줌 아웃 시 소수점 계산이 발생하면 확대 이미지 모서리에 배경이 일부 보일 수 있습니다.
 
 ### 문의 및 제안
-전인표 (inpyodev@gmail.com)<br>https://github.com/inpyodev/mallzoom.js
+https://github.com/ijeon/mallzoom.js
